@@ -72,5 +72,14 @@ header {
   padding: 0 .5rem 0 0;
   font-size: 1rem;}
 /* end/header*/
-
-
+/* container*/
+.container p{
+  width: 75%;
+  position: relative;
+  top: 250px;
+  left: 0;
+  text-align: justify;
+  font-size: 2rem;}
+#la{
+  color: blue;
+}
