@@ -12,10 +12,14 @@ html {
   font-size: 16px;
   color: black;}
 
-a:visited {
-    color: black;}
+a:link {
+   color: #000000;}
+   a:visited {
+   color: #000000;}
 a:hover {
    color: #d4d4d4;}
+
+
 
 /*header*/
 header {
@@ -50,6 +54,7 @@ header {
   top: .2rem;
   left: 6.5rem;
   font-size:1rem;
+  color: black;
   text-decoration: none;}
 
 
@@ -64,6 +69,7 @@ header {
   top: .2rem;
   font-size: 1rem;
   padding: 0 .5rem 0 0;
+  color: black;
   text-decoration: none;}
 .pageNavi p{
   float: left;
