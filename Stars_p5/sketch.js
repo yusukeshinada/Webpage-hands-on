@@ -44,9 +44,6 @@ function draw(){
 	}
 
 	stroke(50);
-	canvas = document.getElementByld("stars");
-	context = canvas.getContext("2d");
-
 
 	lerpVal += lerpInc;
 
