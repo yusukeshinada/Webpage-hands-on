@@ -60,7 +60,6 @@ header {
   color: black;
   text-decoration: none;}
 
-
 .pageNavi {
   float: left;
   position: relative;
@@ -90,8 +89,7 @@ header {
   text-align: justify;
   font-size: 2rem;}
 #la{
-  color: blue;
-}
+  color: blue;}
 
 /*placeholder*/
 .symbol {
