@@ -1,10 +1,12 @@
 /*Global setting*/
-a,p,img,body{
+a,p,img,body,h1,h2,h3,h4,h5,h6{
+  width: auto;
+  height: 20px;
 	position: absolute;
 	top: 0;
 	left: 0;
 	padding: 0;
-	margin: 0 auto;
+	margin: 0;
 	color: black;
 	font-size: 100%;}
 
@@ -15,12 +17,10 @@ html {
 
 a:link {
    color: #000000;}
-  a:visited {
+a:visited {
    color: #000000;}
 a:hover {
    color: #d4d4d4;}
-
-
 
 /*header*/
 header {
@@ -51,7 +51,6 @@ header {
   font-size:1.2rem;}
 .pageTitle a{ 
 	float: right;
-  
   position: relative;
   top: .2rem;
   left: -.6rem;
@@ -81,37 +80,39 @@ header {
   font-size: 1rem;}
 /* end/header*/
 /* container*/
-.container p{
-  width: 80%;
+
+.list {
+ display: inline-block;
+  width: 400px;
+  height: 300px;
   position: relative;
-  top: 350px;
-  left: 0px;
+  top:150px;
+  left:25px;
+  margin: 5px;
+  border:1px dotted #585858;}
+
+.list h1{
+  top: 1rem;  
+  margin: 0 1rem;
+  border-bottom: 1px solid #585858;
+  font-size: 1rem;
+  padding-bottom:1.5rem; 
+  text-align: justify;}
+.list p{
+  top: 3.3rem;
+  font-size: 0.9rem;
   text-align: justify;
-  font-size: 2rem;}
-#la{
-  color: blue;}
+  padding:1rem; }
+.list img{
+  top: 13.2rem;
+  left: 1rem;
+  width: 120px;
+  height: auto;
+  margin: 0;
+  padding: 0;}
 
-/*placeholder*/
-.symbol {
-	width: 100%;
-	position: relative;
-	top: 150px;
-	left: 50%;}
-.symbol img{
-	position: 
-	top:150px;
-	margin: 1rem 0 0 -1.5rem;
-	width: 75px;}ss
-
-.container p #addition{
-  font-size: 1px;
-}
-
-
-@media screen and (max-width: 700px) {
- .pageTitle p {
-    display: none;
-    padding-right: 0; }
-}
+.list :hover{
+opacity: .6;
+color: red; }
 
 
