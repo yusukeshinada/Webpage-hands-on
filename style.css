@@ -1,0 +1,161 @@
+/*Global setting*/
+a,p,img,body,h1,h2,h3,h4,h5,h6{
+  width: 100%;
+  height: 20px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 0;
+	margin: 0;
+	color: black;
+	font-size: 100%;}
+
+html {
+  font-family: 'core_sans_d_35_regularregular';
+  font-size: 16px;
+  color: black;}
+
+a:link {
+   color: #000000;}
+a:visited {
+   color: #000000;}
+a:hover {
+   color: #d4d4d4;}
+
+/*header*/
+header {
+  width: 100%;
+  height: 3.3rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;}
+
+.pageTitle{
+  float: left;
+  width: 30%;
+  position: relative;
+  top: 1rem;
+  left: 1rem;
+  border-right: 2px solid red;}
+
+.pageTitle img{
+  float: left;
+  position: relative;
+  width: 1.2rem;
+height: auto;}
+.pageTitle p{ 
+  width: auto;
+  float: left;
+  position: relative;
+  top: 0;
+  left: .3rem;
+  font-size:1.2rem;}
+.pageTitle a{ 
+  width: auto;
+	float: right;
+  position: relative;
+  top: .2rem;
+  left: -.6rem;
+  
+  font-size:1rem;
+  color: black;
+  text-decoration: none;}
+
+.pageNavi {
+  width: auto;
+  float: left;
+  position: relative;
+  top: 1rem;
+  left: 1.5rem;}
+.pageNavi a{
+  width: auto;
+  float: left;
+  position: relative;
+  top: .2rem;
+  font-size: 1rem;
+  padding: 0 .5rem 0 0;
+  color: black;
+  text-decoration: none;}
+.pageNavi p{
+  width: auto;
+
+  float: left;
+  position: relative;
+  top: .2rem;
+  padding: 0 .5rem 0 0;
+  font-size: 1rem;}
+/* end/header*/
+/* container*/
+
+#su{
+  width: 80%;
+  position: absolute;
+  top: 300px;
+  left: 10%;
+  margin: 3rem auto;
+  text-align: justify;
+  font-size:2rem;}
+#la{
+  color: #1ca1f6;
+}
+
+.symbol{
+  width: 100%;
+  height: 10rem;
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  align-content: center;}
+.symbol img{
+  width: 70px;
+  height: auto;
+  position: relative;
+  top:50px;
+  left: -3rem;}
+.symbol #yu{
+  position: relative;
+  top:-2rem;
+  left: -6.5rem;
+  font-size: 2rem;
+  padding: 0 auto;
+  text-align: center;}
+
+.list {
+  display: inline-block;
+  width: 400px;
+  height: 300px;
+  position: relative;
+  top:90px;
+  left:25px;
+  margin: 5px;
+  border-radius: 10px;
+  border:2px dotted  #777777;}
+
+.list h1{
+  width: auto;
+  top: 1rem;  
+  margin: 0 1rem;
+  border-bottom: 1px solid #777777;
+  font-size: 1rem;
+  padding-bottom:1.5rem; 
+  text-align: justify;}
+.list p{
+  width: auto;
+  top: 3.3rem;
+  font-size: 0.9rem;
+  text-align: justify;
+  padding:1rem; }
+.list img{
+  top: 13.2rem;
+  left: 1rem;
+  width: 120px;
+  height: auto;
+  margin: 0;
+  padding: 0;}
+
+.list :hover{
+opacity: .6;
+color: red;}
+
