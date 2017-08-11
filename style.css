@@ -130,7 +130,7 @@ height: auto;}
   top:90px;
   left:25px;
   margin: 5px;
-  border-radius: 10px;
+  -webkit-border-radius: 10px;
   border:2px dotted  #777777;}
 
 .list h1{
