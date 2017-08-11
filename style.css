@@ -122,23 +122,22 @@ height: auto;}
   padding: 0 auto;
   text-align: center;}
 
-
-
 .list {
- display: inline-block;
+  display: inline-block;
   width: 400px;
   height: 300px;
   position: relative;
-  top:150px;
+  top:90px;
   left:25px;
   margin: 5px;
-  border:1px dotted #585858;}
+  border-radius: 10px;
+  border:2px dotted  #777777;}
 
 .list h1{
   width: auto;
   top: 1rem;  
   margin: 0 1rem;
-  border-bottom: 1px solid #585858;
+  border-bottom: 1px solid #777777;
   font-size: 1rem;
   padding-bottom:1.5rem; 
   text-align: justify;}
@@ -158,6 +157,5 @@ height: auto;}
 
 .list :hover{
 opacity: .6;
-color: red; }
-
+color: red;}
 
