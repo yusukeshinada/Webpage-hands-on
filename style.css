@@ -180,6 +180,7 @@ iframe{
   top: 3.3rem;
   left: 0;
   border:0;
+	z-index:1;
   /*background-color: blue;*/
 
 }
