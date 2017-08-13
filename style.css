@@ -31,6 +31,8 @@ header {
   left: 0;
   right: 0;
   z-index: 10;
+  margin:0;
+  padding: 0; 
   background-color: #0093ae}
 
 .pageTitle{
@@ -54,7 +56,8 @@ header {
   top: 0;
   left: .3rem;
   color: white;
-  font-size:1.2rem;}
+  font-size:1.2rem;
+}
 .pageTitle a{ 
   width: auto;
 	float: right;   
@@ -98,7 +101,8 @@ header {
   left: 10%;
   margin: 3rem auto;
   text-align: justify;
-  font-size:2rem;}
+  font-size:2rem;
+}
 #la{
   color: #1ca1f6;
 }
@@ -161,3 +165,30 @@ header {
 opacity: .6;
 color: red;}
 
+iframe{
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  align-content: center;
+}
+
+#star{
+  position: relative;
+  width: 100%;
+  height: 300px;
+  border: 1px;
+  top: 3.3rem;
+  left: 0;
+  border:0;
+  /*background-color: blue;*/
+
+}
+#mic{
+  position: relative;
+  width: 500px;
+  height: 500px;
+  top: -10rem;
+  left: 36rem;
+  border:0; 
+  
+}
