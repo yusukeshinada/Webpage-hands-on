@@ -188,6 +188,14 @@ iframe{
   left: 36rem;
   border:0;}
 
+#weather{
+  position:  relative;
+  width: 500px;
+  height: 500px;
+  top: 20rem;
+  left: 10rem;
+  border:0;}
+
 .story{
   width: 100%;
     position: relative;
