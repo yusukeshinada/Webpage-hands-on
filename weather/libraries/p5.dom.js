@@ -1,4 +1,4 @@
-/*! p5.dom.js v0.2.13 Oct 1, 2016 */
+/*! p5.dom.js v0.2.9 March 3, 2016 */
 /**
  * <p>The web is much more than just canvas and p5.dom makes it easy to interact
  * with other HTML5 objects, including text, hyperlink, image, input, video,
@@ -109,7 +109,7 @@
    * @param  {String} [container] id, p5.Element, or HTML element to search within
    * @return {Array} Array of p5.Elements containing nodes found
    * @example
-   * <div class='norender'><code>
+   * <div ><code class='norender'>
    * function setup() {
    *   createButton('btn');
    *   createButton('2nd btn');
@@ -121,7 +121,7 @@
    *   }
    * }
    * </code></div>
-   * <div class='norender'><code>
+   * <div ><code class='norender'>
    * // these are all valid calls to selectAll()
    * var a = selectAll('.moo');
    * var b = selectAll('div');
@@ -375,7 +375,6 @@
    * @param  {Number} min minimum value of the slider
    * @param  {Number} max maximum value of the slider
    * @param  {Number} [value] default value of the slider
-   * @param  {Number} [step] step size for each tick of the slider (if step is set to 0, the slider will move continuously from the minimum to the maximum value)
    * @return {Object/p5.Element} pointer to p5.Element holding created node
    * @example
    * <div><code>
@@ -391,32 +390,13 @@
    *   background(val);
    * }
    * </code></div>
-   *
-   * <div><code>
-   * var slider;
-   * function setup() {
-   *   colorMode(HSB);
-   *   slider = createSlider(0, 360, 60, 40);
-   *   slider.position(10, 10);
-   *   slider.style('width', '80px');
-   * }
-   *
-   * function draw() {
-   *   var val = slider.value();
-   *   background(val, 100, 100, 1);
-   * }
-   * </code></div>
    */
   p5.prototype.createSlider = function(min, max, value, step) {
     var elt = document.createElement('input');
     elt.type = 'range';
     elt.min = min;
     elt.max = max;
-    if (step === 0) {
-      elt.step = .000000000000000001; // smallest valid step
-    } else if (step) {
-      elt.step = step;
-    }
+    if (step) elt.step = step;
     if (typeof(value) === "number") elt.value = value;
     return addElement(elt, this);
   };
@@ -476,30 +456,25 @@
    *
    * function myCheckedEvent() {
    *   if (this.checked()) {
-   *     console.log("Checking!");
-   *   } else {
    *     console.log("Unchecking!");
+   *   } else {
+   *     console.log("Checking!");
    *   }
-   * }
+   *
    * </code></div>
    */
   p5.prototype.createCheckbox = function() {
-    var elt = document.createElement('div');
-    var checkbox = document.createElement('input');
-    checkbox.type = 'checkbox';
-    elt.appendChild(checkbox);
+    var elt = document.createElement('input');
+    elt.type = 'checkbox';
     //checkbox must be wrapped in p5.Element before label so that label appears after
     var self = addElement(elt, this);
     self.checked = function(){
-      var cb = self.elt.getElementsByTagName('input')[0];
-      if (cb) {
-        if (arguments.length === 0){
-          return cb.checked;
-        }else if(arguments[0]){
-          cb.checked = true;
-        }else{
-          cb.checked = false;
-        }
+      if (arguments.length === 0){
+        return self.elt.checked;
+      }else if(arguments[0]){
+        self.elt.checked = true;
+      }else{
+        self.elt.checked = false;
       }
       return self;
     };
@@ -510,14 +485,14 @@
     if (arguments[0]){
       var ran = Math.random().toString(36).slice(2);
       var label = document.createElement('label');
-      checkbox.setAttribute('id', ran);
+      elt.setAttribute('id', ran);
       label.htmlFor = ran;
       self.value(arguments[0]);
       label.appendChild(document.createTextNode(arguments[0]));
-      elt.appendChild(label);
+      addElement(label, this);
     }
     if (arguments[1]){
-      checkbox.checked = true;
+      elt.checked = true;
     }
     return self;
   };
@@ -589,62 +564,21 @@
 
   /**
    * Creates a radio button &lt;input&gt;&lt;/input&gt; element in the DOM.
-   * The .option() method can be used to set options for the radio after it is
-   * created. The .value() method will return the currently selected option.
    *
    * @method createRadio
    * @param  {String} [divId] the id and name of the created div and input field respectively
    * @return {Object/p5.Element} pointer to p5.Element holding created node
-   * @example
-   * <div><code>
-   * var radio;
-   *
-   * function setup() {
-   *   radio = createRadio();
-   *   radio.option("black");
-   *   radio.option("white");
-   *   radio.option("gray");
-   *   radio.style('width', '60px');
-   *   textAlign(CENTER);
-   *   fill(255, 0, 0);
-   * }
-   *
-   * function draw() {
-   *   var val = radio.value();
-   *   background(val);
-   *   text(val, width/2, height/2);
-   * }
-   * </code></div>
-   * <div><code>
-   * var radio;
-   *
-   * function setup() {
-   *   radio = createRadio();
-   *   radio.option('apple', 1);
-   *   radio.option('bread', 2);
-   *   radio.option('juice', 3);
-   *   radio.style('width', '60px');
-   *   textAlign(CENTER);
-   * }
-   *
-   * function draw() {
-   *   background(200);
-   *   var val = radio.value();
-   *   if (val) {
-   *     text('item cost is $'+val, width/2, height/2);
-   *   }
-   * }
-   * </code></div>
    */
   p5.prototype.createRadio = function() {
     var radios = document.querySelectorAll("input[type=radio]");
     var count = 0;
     if(radios.length > 1){
+      console.log(radios,radios[0].name);
       var length = radios.length;
       var prev=radios[0].name;
       var current = radios[1].name;
-      count = 1;
-      for(var i = 1; i < length; i++) {
+      count=1;
+      for(var i = 1; i < length; i++ ){
         current = radios[i].name;
         if(prev != current){
           count++;
@@ -681,7 +615,7 @@
     };
     self.selected = function(){
       var length = this.elt.childNodes.length;
-      if(arguments.length == 1) {
+      if(arguments[0]) {
         for (var i = 0; i < length; i+=2){
           if(this.elt.childNodes[i].value == arguments[0])
             this.elt.childNodes[i].checked = true;
@@ -696,7 +630,7 @@
     };
     self.value = function(){
       var length = this.elt.childNodes.length;
-      if(arguments.length == 1) {
+      if(arguments[0]) {
         for (var i = 0; i < length; i+=2){
           if(this.elt.childNodes[i].value == arguments[0])
             this.elt.childNodes[i].checked = true;
@@ -834,9 +768,6 @@
     elt.addEventListener('loadedmetadata', function() {
       c.width = elt.videoWidth;
       c.height = elt.videoHeight;
-      // set elt width and height if not set
-      if (c.elt.width === 0) c.elt.width = elt.videoWidth;
-      if (c.elt.height === 0) c.elt.height = elt.videoHeight;
       c.loadedmetadata = true;
     });
 
@@ -907,17 +838,13 @@
                             navigator.msGetUserMedia;
 
   /**
-   * <p>Creates a new &lt;video&gt; element that contains the audio/video feed
-   * from a webcam. This can be drawn onto the canvas using video().</p>
-   * <p>More specific properties of the feed can be passing in a Constraints object.
+   * Creates a new &lt;video&gt; element that contains the audio/video feed
+   * from a webcam. This can be drawn onto the canvas using video(). More
+   * specific properties of the stream can be passing in a Constraints object.
    * See the
-   * <a href="http://w3c.github.io/mediacapture-main/getusermedia.html#media-track-constraints"> W3C
+   * <a href="http://w3c.github.io/mediacapture-main/getusermedia.html">W3C
    * spec</a> for possible properties. Note that not all of these are supported
-   * by all browsers.</p>
-   * <p>Security note: A new browser security specification requires that getUserMedia,
-   * which is behind createCapture(), only works when you're running the code locally,
-   * or on HTTPS. Learn more <a href="http://stackoverflow.com/questions/34197653/getusermedia-in-chrome-47-without-using-https">here</a>
-   * and <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia">here</a>.</p>
+   * by all browsers.
    *
    * @method createCapture
    * @param  {String|Constant|Object}   type type of capture, either VIDEO or
@@ -987,9 +914,12 @@
 
       navigator.getUserMedia(constraints, function(stream) {
         elt.src = window.URL.createObjectURL(stream);
+        elt.onloadedmetadata = function(e) {
+          elt.play();
           if (cb) {
             cb(stream);
           }
+        };
       }, function(e) { console.log(e); });
     } else {
       throw 'getUserMedia not supported in this browser';
@@ -998,9 +928,8 @@
     c.loadedmetadata = false;
     // set width and height onload metadata
     elt.addEventListener('loadedmetadata', function() {
-      elt.play();
-      c.width = c.elt.width = elt.videoWidth;
-      c.height = c.elt.height = elt.videoHeight;
+      c.width = elt.videoWidth;
+      c.height = elt.videoHeight;
       c.loadedmetadata = true;
     });
     return c;
@@ -1391,43 +1320,6 @@
 
 
   /**
-   *
-   * Removes an attribute on the specified element.
-   *
-   * @method removeAttribute
-   * @param  {String} attr       attribute to remove
-   * @return {Object/p5.Element}
-   *
-   * @example
-   * <div><code>
-   * var button;
-   * var checkbox;
-   *
-   * function setup() {
-   *   checkbox = createCheckbox('enable', true);
-   *   checkbox.changed(enableButton);
-   *   button = createButton('button');
-   *   button.position(10, 10);
-   * }
-   *
-   * function enableButton() {
-   *   if( this.checked() ) {
-   *     // Re-enable the button
-   *     button.removeAttribute('disabled');
-   *   } else {
-   *     // Disable the button
-   *     button.attribute('disabled','');
-   *   }
-   * }
-   * </code></div>
-   */
-  p5.Element.prototype.removeAttribute = function(attr) {
-    this.elt.removeAttribute(attr);
-    return this;
-  };
-
-
-  /**
    * Either returns the value of the element if no arguments
    * given, or sets the value of the element.
    *
@@ -1479,7 +1371,7 @@
    * @example
    * <div class='norender'><code>
    * var div = createDiv('div');
-   * div.style("display", "none");
+   * div.attribute("display", "none");
    * div.show(); // turns display to block
    * </code></div>
    */
@@ -1802,9 +1694,9 @@
       this.drawingContext = this.canvas.getContext('2d');
     }
     if (this.loadedmetadata) { // wait for metadata for w/h
-      if (this.canvas.width !== this.elt.width) {
-        this.canvas.width = this.elt.width;
-        this.canvas.height = this.elt.height;
+      if (this.canvas.width !== this.elt.videoWidth) {
+        this.canvas.width = this.elt.videoWidth;
+        this.canvas.height = this.elt.videoHeight;
         this.width = this.canvas.width;
         this.height = this.canvas.height;
       }
@@ -1822,23 +1714,12 @@
   p5.MediaElement.prototype.get = function(x, y, w, h){
     if (this.loadedmetadata) { // wait for metadata
       return p5.Renderer2D.prototype.get.call(this, x, y, w, h);
-    } else if (!x) {
-      return new p5.Image(1, 1);
-    } else {
-      return [0, 0, 0, 255];
-    }
+    } else return [0, 0, 0, 255];
   };
   p5.MediaElement.prototype.set = function(x, y, imgOrCol){
     if (this.loadedmetadata) { // wait for metadata
       p5.Renderer2D.prototype.set.call(this, x, y, imgOrCol);
     }
-  };
-  p5.MediaElement.prototype.copy = function(){
-    p5.Renderer2D.prototype.copy.apply(this, arguments);
-  };
-  p5.MediaElement.prototype.mask = function(){
-    this.loadPixels();
-    p5.Image.prototype.mask.apply(this, arguments);
   };
   /**
    *  Schedule an event to be called when the audio or video
