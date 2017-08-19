@@ -1,14 +1,16 @@
-var mic, recorder, soundFile;
-var recordButton, playButton;
+var mic;
+var recorder;
+var soundFile;
+var recordButton; 
+var playButton;
 var savedFile;
 var amplitude;
-var cnv, slider;
+var slider;
+var messe;
 
 function setup() {
   // set up a canvas
-  cnv = createCanvas(500, 500);
-
-
+  createCanvas(400, 300);
   // set up a mic
   mic = new p5.AudioIn();
   mic.start();
@@ -21,27 +23,27 @@ function setup() {
   recordButton = createButton('Record now');
   recordButton.mousePressed(record);
   recordButton.mouseReleased(stopRecord);
-  recordButton.position(175, 420);
+  recordButton.position(125, 320);
 
   playButton = createButton('Play now');
   playButton.mousePressed(play);
-  playButton.position(260, 420);
+  playButton.position(210, 320);
 
   amplitude = new p5.Amplitude();
 
   slider = createSlider(0, 20, 5);
-  slider.position(185, 400);
+  slider.position(135, 300);
 }
 
 function draw() {
-  // background(0);
+   // background(0);
   clear();
   var level = mic.getLevel();
   var size = map(level, 0, 1, 0, 700);
   // fill(0, 200, 170);
   strokeWeight(2);
   stroke(0,250,8);
-  var a = ellipse(width / 2, height / 2, size/2, size);
+  ellipse(width / 2, height / 2, size/2, size);
   fill(255, 0, 170,80);
   strokeWeight(50);
   stroke(255,50,170,50);
@@ -49,7 +51,7 @@ function draw() {
 }
 
 function record() {
-  var messe = console.log('StartRecord');
+  messe = console.log('StartRecord');
   savedFile = new p5.SoundFile();
   recorder.record(savedFile);
 }
