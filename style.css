@@ -11,7 +11,7 @@ a,p,img,body,h1,h2,h3,h4,h5,h6, iframe{
 	font-size: 100%;}
 
 html {
-  font-family: 'Spectral', serif;;
+  font-family: 'Spectral', serif;
   font-size: 16px;
   color: #222;}
 
@@ -251,7 +251,7 @@ header {
 
 /*--------------------------------japan.html----------------------------------*/
 .story{
-  width: 100%;
+  	width: 100%;
     position: relative;
     top: 6rem;
     margin: 0;
@@ -262,8 +262,8 @@ header {
     color: #f78659;
     text-decoration:underline dotted;}
 
-.list {
-  display: inline-block;
+.list- {
+  display: inline-flex;
   width: 400px;
   height: 300px;
   position: relative;
@@ -273,28 +273,29 @@ header {
   -webkit-border-radius: 10px;
   border:2px dotted  #777777;}
 
-.list h1{
+.list- h1{
   width: auto;
-  top: 1rem;
+  top: .7rem;
   margin: 0 1rem;
-  border-bottom: 1px solid #777777;
   font-size: 1rem;
-  padding-bottom:1.5rem;
+ 
   text-align: justify;}
-.list p{
+.list- p{
   width: auto;
   top: 3.3rem;
   font-size: 0.9rem;
   text-align: justify;
-  padding:1rem; }
-.list img{
-  top: 13.2rem;
+  padding: 0.3rem 0; 
+  margin: .5rem 1rem;
+   line-height: 1rem;
+  border-top: 1px solid #777777;}
+.list- img{
+  top: 13.5rem;
   left: 1rem;
   width: 120px;
   height: auto;
   margin: 0;
   padding: 0;}
-
-.list :hover{
+.list- :hover{
   opacity: .6;
   color: red;}
