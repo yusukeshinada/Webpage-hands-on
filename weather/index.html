@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>testJson</title>
+    <script src="libraries/p5.js" type="text/javascript"></script>
+    <script src="libraries/p5.dom.js" type="text/javascript"></script>
+    <script src="libraries/p5.sound.js" type="text/javascript"></script>
+    <script src="weather.js" type="text/javascript"></script>
+    <style> body {
+    				padding: 0;
+    				margin: 0;} 
+    			canvas {
+    				position:relative;
+    				top:0px;
+    				left:0;
+    				vertical-align: top;}
+          p{
+            margin: 1rem auto;
+            color: #DB005A;}
+            
+         #adj{
+           	font-size:.9rem;
+           	color:#444;}
+    </style>
+  </head>
+  <body>
+    <p>What's the temparature in your country and more?
+    <br>Type a country or city name into the box.<br>
+    <span id = 'adj'>Note: If a security app's working on the page, please unlock it.</span></p>
+  	<input id='cityName1' value='Hong Kong' ></input>
+  	<button id='button1'>submit</button>
+  	<input id='cityName2' value='New York' ></input>
+  	<button id='button2'>submit</button>
+  </body>
+</html>

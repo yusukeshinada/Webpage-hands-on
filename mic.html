@@ -1,0 +1,107 @@
+<html lang="en">
+<head>
+
+    <title>Yusuke Shinada</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" type="image/x-icon" href="assets/logo.png">
+    <link rel="stylesheet" href="style.css" >
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:300,300i,400,400i,600,600i|Open+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:300,400,700|Playfair+Display:400,700,900" rel="stylesheet">
+
+</head>
+<body>
+  <div class="portfolio">
+
+    <!-- MENU BAR -->
+    <div class="nav-footer-container">
+      <nav class="nav" role="navigation" title="main-navigation">
+
+        <a href="index.html" style="text-decoration:none">
+          <div class="nav__name">
+            <img class="nav__logo" src="assets/Yusuke.png" alt="portfolio logo"></img>
+          </div>
+        </a>
+
+        <ul class="nav__items-pages" title="page navigation">
+          <li class="nav__item">
+            <a href="index.html" class="nav__link nav__link--selected">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="https://yusukeshinadatokyo.myportfolio.com/" class="nav__link" target="_blank">Real Portfolio</a>
+          </li>
+          <li class="nav__item">
+            <a href="japan.html"  class="nav__link">Japan</a>
+          </li>
+          <li class="nav__item">
+            <a href="about.html" class="nav__link">Info</a>
+          </li>
+        </ul>
+
+      </nav>
+
+      <footer class="footer">
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a href="https://www.facebook.com/yusuke.shinada.1" target="_blank">
+              <img class="footer__image" src="assets/facebook.jpg" alt="facebook logo"></img>
+            </a>
+          </li>
+          <li class="footer__item">
+            <a href="https://www.instagram.com/think_shinada/" target="_blank">
+              <img class="footer__image" src="assets/instagram.jpg" alt="instagram logo"></img>
+            </a>
+          </li>
+          <li class="footer__item">
+            <a href="https://github.com/yusukeshinada" target="_blank">
+              <img class="footer__image" src="assets/github.png" alt="github logo"></img>
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+
+  <section class="project">
+    <div class="project-container">
+      <h2 class="project__heading"> Mic With p5.js</h2>
+      <h5 class="project__sub-heading"> Programming, Interaction design, Accessibility</h5>
+      <p class="project__blurb">
+        Tools Used : p5.js
+      </p>
+
+      <p class="project__blurb2">
+       Let's start with a basic setup to record. Two buttons - one which records while it is pressed and another that plays back the recording. 
+       <br>
+         <br>
+       Choose "allow" if you see the box like this.
+      </p>
+      <img src="assets/check.jpg" style="width: 200px" >
+      <br>
+      <br>
+      <p class="project__blurb">
+      Why am I dooing this?
+      </p>
+      <p class="project__blurb2">
+      This project is the very simple and basic stuffs with mic. However that we give the object visualized the sound of you will become to be a trigger that makes your voice accessible to every device. We can be avalable for a value that is gathered from your voice or sound around you. 
+      </p>  
+      <br>
+
+   
+      <iframe id="mic" src="mic/index.html" style="border:0; width:500px; height: 500px; margin: 0"></iframe>
+
+      <p class="project__blurb2">
+       Now, to actually create a mic and start recording into a file we need to create 3 p5 objects p5.AudioIn for the mic component, p5.SoundRecorder to record the input and p5.SoundFile to hold the recorded file. And we have to add functionalities into startRecord() stopRecord() and play() and voila!
+      </p>
+     <p class="project__blurb2">
+       <a class="project__link" href="mic/mictest.js" target="_blank">Souce code</a> 
+     </p>
+
+      <br>
+      <a class="project__back-link" href="index.html"> &#x2190; Back to Home </a>
+      <br>
+
+    </div>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,152 @@
+<html lang="en">
+<head>
+
+    <title>Yusuke Shinada</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" type="image/x-icon" href="assets/logo.png">
+    <link rel="stylesheet" href="style.css" >
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:300,300i,400,400i,600,600i|Open+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:300,400,700|Playfair+Display:400,700,900" rel="stylesheet">
+
+</head>
+<body >
+  <div class="portfolio">
+
+    <!-- MENU BAR -->
+    <div class="nav-footer-container">
+      <nav class="nav" role="navigation" title="main-navigation">
+
+        <a href="index.html" style="text-decoration:none">
+          <div class="nav__name">
+            <img class="nav__logo" src="assets/Yusuke.png" alt="portfolio logo"></img>
+          </div>
+        </a>
+
+        <ul class="nav__items-pages" title="page navigation">
+          <li class="nav__item">
+            <a href="index.html" class="nav__link nav__link--selected">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="https://yusukeshinadatokyo.myportfolio.com/" class="nav__link" target="_blank">Real Portfolio</a>
+          </li>
+          <li class="nav__item">
+            <a href="japan.html"  class="nav__link">Japan</a>
+          </li>
+          <li class="nav__item">
+            <a href="about.html" class="nav__link">Info</a>
+          </li>
+        </ul>
+
+      </nav>
+
+      <footer class="footer">
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a href="https://www.facebook.com/yusuke.shinada.1" target="_blank">
+              <img class="footer__image" src="assets/facebook.jpg" alt="facebook logo"></img>
+            </a>
+          </li>
+          <li class="footer__item">
+            <a href="https://www.instagram.com/think_shinada/" target="_blank">
+              <img class="footer__image" src="assets/instagram.jpg" alt="instagram logo"></img>
+            </a>
+          </li>
+          <li class="footer__item">
+            <a href="https://github.com/yusukeshinada" target="_blank">
+              <img class="footer__image" src="assets/github.png" alt="github logo"></img>
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+
+  <section class="project">
+    <div class="project-container">
+      <h2 class="project__heading"> JSON With p5.js</h2>
+      <h5 class="project__sub-heading"> Programming, Interaction design, Accessibility </h5>
+      <p class="project__blurb">
+        Tools Used : p5.js, API
+      </p>
+
+
+
+      <p class="project__blurb2">
+       Json is a kind of data file and we grab its values into our code easily to get the data visualized. here is the temperature from hong kong and new york but this is a placeholder where you can type whatever the country or city name you want. 
+      <br>
+      <br>
+
+      The API data from: <a class="project__link" href="http://openweathermap.org/" target="_blank">OpenWeatherMap</a>
+      <br>
+      <br>
+      Here's a demo about the temparature.
+       </p>
+       
+     <iframe src="weather/index.html" style="border:0; width:500px; height: 400px"></iframe>
+
+
+     <p class="project__blurb2">
+       <a class="project__link" href="weather/weather.js" target="_blank">Souce code</a> 
+     </p>
+
+     <p class="project__blurb" style="margin: 0">
+          How you get API:
+      </p>
+      <div class="project__blurb2">
+           You first need to sign up/in on website to get API key that is assigned to identify you.
+      </div> 
+      <br>
+      <br>
+      <p class="project__blurb" style="margin: 0">
+          Process 1:
+      </p>
+
+      <div class="project__blurb2">
+           Access to <a class="project__link" href="http://openweathermap.org/" target="_blank">OpenWeatherMap</a> and sign up to get API key. After finishing sign up, you can see your API key at your page and copy it! 
+      </div> 
+      <br>
+      <br>
+      <img class="image_item" src="assets/api01.jpg" ></img>
+      <br>
+      <br>
+      <br>
+      <p class="project__blurb" style="margin: 0">
+          Process 2:
+      </p>
+      <div class="project__blurb2">
+           Move on API in the menu bar, hit the box of "API doc" whatever you're interested in.
+      </div> 
+      <br>
+      <br>
+      <img class="image_item" src="assets/api02.jpg" ></img>
+      <br>
+      <br>
+      <br>
+      <p class="project__blurb" style="margin: 0">
+          Process 3
+      </p>
+      <div class="project__blurb2">
+           Then you will find some sample page as URL, hit it and make sure the URL. "appid" appears in the end.
+           <br>
+           The part is just a placeholder for your API key so that paste your API key after the word of = plus enter key on keyboard. You will make sure that each value comimng from the weather as JSON data. We also switch the country easily by changing the country name from URL bar.
+           <br>
+           <a class="project__link" href="https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa" target="_blank">This extension for google chrome</a> is really helpful to align JSON data.
+      </div> 
+      <br>
+      <br>
+      <img class="image_item" src="assets/api03.jpg" ></img>
+
+
+
+
+
+
+      <br>
+      <a class="project__back-link" href="index.html"> &#x2190; Back to Home </a>
+      <br>
+
+    </div>
+  </section>
+
+</body>
+</html>
