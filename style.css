@@ -281,7 +281,6 @@ color: #262626;
 }
 
 
-
 @media screen and (max-width: 768px) {
   .footer__list {
     padding: 0;
@@ -580,7 +579,16 @@ color: #262626;
     margin-right: 0; }
 
 
+.hand{
 
+position: absolute;
+top: 153px;
+left: 106px;
+font-family: "Josefin Slab", serif;
+font-size: .7rem;
+color: #262626;
+
+}
 
 
      }
