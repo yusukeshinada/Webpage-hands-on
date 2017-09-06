@@ -179,6 +179,7 @@ padding: 0;
 .footer {
   height: 10%;
   display: flex;
+
   flex-direction: row; }
 
 .projects, .pieces {
@@ -245,21 +246,41 @@ padding: 0;
 @media screen and (max-width: 480px) {
   .about {
     flex-direction: column; } }
+
 .footer__list {
   display: flex;
   flex-direction: row;
-  padding-left: 1.8rem; }
+
+  padding-left: 1.8rem;}
 
 .footer__item {
   width: 22px;
+  height: 10px;
   list-style: none;
   display: inline-flex;
   margin: 0;
-  padding-right: 1.2rem; }
+
+
+  padding-right: 1.2rem; 
+}
 
 .footer__image {
   width: 100%;
-  opacity: 0.8; }
+  opacity: 0.8;   
+padding-bottom: 0;}
+
+.hand{
+
+position: absolute;
+top: 735px;
+left: 1.8rem;
+font-family: "Josefin Slab", serif;
+font-size: .8rem;
+color: #262626;
+
+}
+
+
 
 @media screen and (max-width: 768px) {
   .footer__list {
@@ -272,7 +293,21 @@ padding: 0;
 
   .footer__image {
     width: 90%;
-    opacity: 0.8; } }
+    opacity: 0.8; } 
+
+  
+.hand{
+
+position: absolute;
+top: 0px;
+left: 20px;
+font-family: "Josefin Slab", serif;
+font-size: .8rem;
+color: #262626;
+
+}
+}
+
 .nav__link, .nav__item, .nav__category {
   text-decoration: none;
   color: #aaaaaa;
