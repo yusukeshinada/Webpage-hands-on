@@ -1,0 +1,175 @@
+<html lang="en">
+<head>
+
+    <title>Yusuke Shinada</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" type="image/x-icon" href="assets/logo.png">
+    <link rel="stylesheet" href="style.css" >
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:300,300i,400,400i,600,600i|Open+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:300,400,700|Playfair+Display:400,700,900" rel="stylesheet">
+
+</head>
+<body>
+  <div class="portfolio">
+
+    <!-- MENU BAR -->
+    <div class="nav-footer-container">
+      <nav class="nav" role="navigation" title="main-navigation">
+
+        <a href="index.html" style="text-decoration:none">
+          <div class="nav__name">
+            <img class="nav__logo" src="assets/Yusuke.png" alt="portfolio logo"></img>
+          </div>
+        </a>
+
+        <ul class="nav__items-pages" title="page navigation">
+          <li class="nav__item">
+            <a href="index.html" class="nav__link nav__link--selected">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="https://yusukeshinadatokyo.myportfolio.com/" class="nav__link" target="_blank">Real Portfolio</a>
+          </li>
+          <li class="nav__item">
+            <a href="japan.html"  class="nav__link">Japan</a>
+          </li>
+          <li class="nav__item">
+            <a href="about.html" class="nav__link">Info</a>
+          </li>
+        </ul>
+
+      </nav>
+
+      <footer class="footer">
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a href="https://www.facebook.com/yusuke.shinada.1" target="_blank">
+              <img class="footer__image" src="assets/facebook.jpg" alt="facebook logo"></img>
+            </a>
+          </li>
+          <li class="footer__item">
+            <a href="https://www.instagram.com/think_shinada/" target="_blank">
+              <img class="footer__image" src="assets/instagram.jpg" alt="instagram logo"></img>
+            </a>
+          </li>
+          <li class="footer__item">
+            <a href="https://github.com/yusukeshinada" target="_blank">
+              <img class="footer__image" src="assets/github.png" alt="github logo"></img>
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+
+  <section class="project">
+    <div class="project-container">
+      <h2 class="project__heading"> Bring your Instagram into the website 101</h2>
+      <h5 class="project__sub-heading"> Programming, Interaction design, Accessibility </h5>
+      <p class="project__blurb">
+        Tools Used : p5.js, API
+      </p>
+      <p class="project__blurb2">
+       We can bring an Instagram acount into your website with API. This doesn't mean to embed your ceartain photos or videos on the website like <a class="project__link" target="_blank" href="https://help.instagram.com/513918941996087">this</a>, so that those stuffs you did upload on Instagaram automatically will be uploaded on the website as soon as you do. Json used is a kind of data file and we grab its values into our code easily to get the data visualized.
+      If you're not familiar to API or don't learn, please take a look at <a class="project__link" href="https://snapwidget.com/" target="_blank">Snap Widget</a> without API.
+      <img src="assets/insta00.jpg" style="width: 80%; margin: 0 auto; display: inline-block">
+      <br>
+     <p class="project__blurb" style="margin: 0">
+          The summary:
+      </p>
+      <div class="project__blurb2">
+        <ol>
+          <li>Register to get the API key and also client ID. - the process 1 through 2.</li>
+          <li>Authenticate and acquire the token. - the process 3.</li>
+          <li>Access to the URL with the token to confirm JSON data. - the process 4.</li>
+          <li>How you can manipulate the JSON by p5.js. - the process 5.</li>
+        </ol>
+        <br>
+        Here is the introduction about how you can manipulate API acquired from Instagram.
+      The API data from: <a class="project__link" href="https://www.instagram.com/developer/" target="_blank">Instagram developer</a>
+      <br>
+      <br>
+        <p class="project__blurb" style="margin: 0">
+          The process 1:
+        </p>
+           Access to Instagram above and sign up. You difinitely need this process whereever you get API key. Whataever your contents will work well by putting your API key into a certain URL.
+           <br>
+           - Hit the Register Your Application in the middle of the page.
+      </div>
+      <br> 
+      <img src="assets/insta01.jpg" style="width: 60%; margin: 0 auto; display: inline-block">
+      <br>
+      <br>
+      <p class="project__blurb" style="margin: 0">
+          The process 2-1:
+        </p>
+       <div class="project__blurb2">
+           You will see these boxes and should fill out.
+           <br>
+           - Please, type your information into the boxes.
+          <ol>
+           <li>Application Name - Whatever</li>
+           <li>Description- Whatever</li>
+           <li>Website URL - the URL of your website</li>
+           <li>Valid redirect URIs - the URL of your website</li>
+           <li>Contact email - Your e-mail address</li>
+          </ol>
+          <img src="assets/insta02.jpg" style="width: 60%; margin: 0 auto; display: inline-block">
+
+      <br>
+        <br>
+          <br>
+          <br>
+          
+       <p class="project__blurb" style="margin: 0">
+          The process 2-2:
+        </p>
+            Move on into Security tab.
+           <br>
+           - Uncheck the Disable implicit OAuth.
+           <br>
+           - Press the Register with the security words displayed.
+           <br>
+           <img src="assets/insta03.jpg" style="width: 60%;  margin: 0 auto; display: inline-block">
+      </div> 
+      <p class="project__blurb" style="margin: 0">
+          The process 3:
+        </p>
+       <div class="project__blurb2">
+           You finally get authenticated and acquire the token in this part. You have already had what you need to authenticate such as the CLIENT-ID and REDIRECT-URI.
+           <br>
+           - Please, access to <a class="project__link" target="_blank" href="https://api.instagram.com/oauth/authorize/?client_id=CLIENT-ID&redirect_uri=REDIRECT-URI&response_type=co"> https://api.instagram.com/oauth/authorize/?client_id=CLIENT-ID&redirect_uri=REDIRECT-URI&response_type=co</a>.
+       <br>
+          - Make sure the URL you did and you can see the CLIENT-ID and REDIRECT-URI after " = " in the URL. In this part where you must replace the contents you registered for the first time . When done, Reload the page and move on the next page below.
+          <br>
+           - Press the Authorize in green.
+          <br>
+          <img src="assets/insta04.jpg" style="width: 60%;  margin: 0 auto; display: inline-block">
+      </div>
+
+      <p class="project__blurb" style="margin: 0">
+          The process 4:
+        </p>
+       <div class="project__blurb2">
+           You will fly to your website after pressing the Authorize at the end of the process 3 but quickly make sure the URL. You must notice that a "code =" is added in the end of the URL that is the token.  
+           <br>
+           - Please, access to <a class="project__link" target="_blank" href="https://api.instagram.com/v1/users/self/media/recent/?access_token=ACCESS-TOKEN"> https://api.instagram.com/v1/users/self/media/recent/?access_token=ACCESS-TOKEN</a>.
+       <br>
+          - Replace the ACCESS-TOKEN after "=" to the token you've got in the URL. 
+          <br>
+           - Reload the page then, you will see the JSON data on your browser.
+          <br>
+          <br>
+           <a class="project__link" href="https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa" target="_blank">This extension for google chrome</a> is really helpful to align JSON data.
+      </div>
+      <br>
+      <br>
+      <a class="project__back-link" href="index.html"> &#x2190; Back to Home </a>
+      <br>
+
+
+
+    </div>
+  </section>
+
+</body>
+</html>
