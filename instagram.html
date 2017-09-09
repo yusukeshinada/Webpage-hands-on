@@ -3,10 +3,11 @@
 
     <title>Yusuke Shinada</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="shortcut icon" type="image/x-icon" href="assets/logo.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/logo.png">
     <link rel="stylesheet" href="style.css" >
     <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:300,300i,400,400i,600,600i|Open+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:300,400,700|Playfair+Display:400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Tammudu" rel="stylesheet">
 
 </head>
 <body>
@@ -69,10 +70,24 @@
         Tools Used : p5.js, API
       </p>
       <p class="project__blurb2">
-       We can bring an Instagram acount into your website with API. This doesn't mean to embed your ceartain photos or videos on the website like <a class="project__link" target="_blank" href="https://help.instagram.com/513918941996087">this</a>, so that those stuffs you did upload on Instagaram automatically will be uploaded on the website as soon as you do. Json used is a kind of data file and we grab its values into our code easily to get the data visualized.
-      If you're not familiar to API or don't learn, please take a look at <a class="project__link" href="https://snapwidget.com/" target="_blank">Snap Widget</a> without API.
-      <img src="assets/insta00.jpg" style="width: 80%; margin: 0 auto; display: inline-block">
+       Here is the introduction about how you can manipulate API acquired from Instagram. We can bring an Instagram photos or videos into your website with API by real time. This doesn't mean to embed your ceartain photos or videos on the website like <a class="project__link" target="_blank" href="https://help.instagram.com/513918941996087">this</a>, so that those stuffs you did upload on Instagaram automatically will be uploaded on the website as soon as you do. Json used is a kind of data file and we grab its values into our code easily to get the data visualized.
       <br>
+      <br>
+      If you're not familiar to API or don't learn it but you wanna do that, please take a look at <a class="project__link" href="https://snapwidget.com/" target="_blank">Snap Widget</a> without API.
+      <img src="assets/insta00.jpg" style="width: 80%; margin: 0 auto; display: inline-block">
+
+       <p class="project__blurb" style="margin: 0">
+          The outcome:
+     
+      <h1 style="font-family: 'Baloo Tammudu', cursive; font-size:2rem; font-weight:400;color:#00edc3; margin: o">Hello, the Instagram's items!!</h1>
+      Rows: <a class="project__link" target="_blank" href="insta2/sketch.js"> Sorce code</a> 
+        <iframe class="insta" src="insta2/index.html" style="border:0; width:100%; height: 70px; margin: 0"></iframe>
+        <div class="project__blurb2" style="font-size: .7rem; margin: 0">
+        - The photo will be added here at the same time of uploading to Instagram.
+         </div>
+      <br>
+         <br>
+  
      <p class="project__blurb" style="margin: 0">
           The summary:
       </p>
@@ -81,13 +96,14 @@
           <li>Register to get the API key and also client ID. - the process 1 through 2.</li>
           <li>Authenticate and acquire the token. - the process 3.</li>
           <li>Access to the URL with the token to confirm JSON data. - the process 4.</li>
-          <li>How you can manipulate the JSON by p5.js. - the process 5.</li>
+          <li>How you can import the JSON by p5.js. - the process 5.</li>
+          <li>How you can display the uploads of Instagram on the window of p5.js. - the process 6.</li>
         </ol>
         <br>
-        Here is the introduction about how you can manipulate API acquired from Instagram.
-      The API data from: <a class="project__link" href="https://www.instagram.com/developer/" target="_blank">Instagram developer</a>
+        The API data from: <a class="project__link" href="https://www.instagram.com/developer/" target="_blank">Instagram developer</a>
       <br>
       <br>
+       <br>
         <p class="project__blurb" style="margin: 0">
           The process 1:
         </p>
@@ -163,8 +179,63 @@
       </div>
       <br>
       <br>
-      <a class="project__back-link" href="index.html"> &#x2190; Back to Home </a>
+      <p class="project__blurb" style="margin: 0">
+          The process 5:
+        </p>
+       <div class="project__blurb2">
+          Manipulate the JSON with Javascript as p5.js which is Web Editor and an in-browser interactive development environment for writing p5.js sketches. It aims to lower the bar for creative coding. Users can start writing p5.js by simply opening a browser window, without the need to download software or do any configuration. It is free to use and it is an open source project, which is led by Cassie Tarakajian.
+           <br>
+           <br>
+           Download:<a class="project__link" target="_blank" href="https://p5js.org/"> p5.js</a>
+       <br>
+       <br>
+          - Write code like this in setup() to load the JSON data from URL including the token. The function getData() is working as a function of call back which is excuted after loadJSON() excuted.
+          <br>
+           - Press the Play button and you will see the JSON data in the console. <a class="project__link" target="_blank" href="insta/insta.js"> Sorce code</a> 
+          <br>
+          <img src="assets/insta05.jpg" style="width: 60%;  margin: 0 auto; display: inline-block">
+          <br>
+          
+      </div>
       <br>
+      <br>
+
+      <p class="project__blurb" style="margin: 0">
+          The process 6:
+        </p>
+       <div class="project__blurb2">
+          Next stops is visualizing the data, instead of lining up the one as the list. I think that you will find a bunch of "url" in the console box that are the uploaded photos. Click it. The photos or videos will shows up in front of you. We"ll eventually use this urls to display on the website with "createImg" that is included in the p5.dom library that makes it easy to interact with other HTML5 objects, including text, hyperlink, image, input, video, audio, and webcam.
+        <br>
+          - Rewrite code to see one of the photos.  <a class="project__link" target="_blank" href="insta/insta02.js"> Sorce code</a> 
+          <br>
+          <img src="assets/insta06.jpg" style="width: 60%;  margin: 0 auto; display: inline-block">
+        <br>
+        <br>
+          - Rewrite again to see the 9 photos. You don't have to have the high resolusion of the photo to line up on the website. Note that the size of thumbnail is 150 by 150 px.<a class="project__link" target="_blank" href="insta/insta03.js"> Sorce code</a>
+          <br>
+          - We've done.
+          <br> 
+          <img src="assets/insta07.jpg" style="width: 60%;  margin: 0 auto; display: inline-block">
+       <br> 
+       <br>
+        We've finished so far that and usually should organize the items with stylesheet to go with the website.
+        <br> 
+        <br>
+        <h1 style="font-family: 'Baloo Tammudu', cursive; font-size:2rem; font-weight:400;color:#00edc3; margin: o">Hello, the Instagram's items again!!</h1>
+ 
+       Square: <a class="project__link" target="_blank" href="insta/sketch.js"> Sorce code</a> / <a class="project__link" target="_blank" href="insta/style.css">StyleSheet</a> 
+       <iframe class="insta" src="insta/index.html" style="border:0; width:100%; height: 380px; margin: 0"></iframe>
+
+     </div>
+
+
+
+
+
+      <br>
+      <br>
+      <a class="project__back-link" href="index.html"> &#x2190; Back to Home </a>
+      <br>  
 
 
 
