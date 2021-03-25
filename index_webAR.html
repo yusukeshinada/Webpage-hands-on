@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Thank you very much for you</title>
+  <!-- Import the component -->
+	<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+	<script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+</head>
+
+
+<body>
+    <model-viewer
+      reveal="manual"
+      src="./2021_AR_Github/data/Okubo.gltf"
+      ios-src="./2021_AR_Github/data/Okubo.usdz" 
+      poster="./2021_AR_Github/data/Background.png" 
+      style="width:360px;height:555px;" 
+      auto-rotate
+      camera-controls
+      enviroment-image="./sora.jpg"
+      exposure= 1 
+      ar
+      shadow-intensity= 1 
+    >
+
+    <button id="custom-ar-button" slot="ar-button" style=" margin-top: 380px; width:220px; height:105px; border-style:none; background: url(./2021_AR_Github/Start.png) left top no-repeat; background-size:cover; "></button>
+
+
+
+
+    </model-viewer>
+</body>
+</html>
