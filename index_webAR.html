@@ -8,27 +8,18 @@
   <!-- Import the component -->
 	<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 	<script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
-
-
-
-      <style>
-
-dirr {
-  text-align:center;
-}
-	      
-	     
-@media screen and (max-width:1080px) {
-dirr{width: 90%;
-	display: inline-block;
-	vertical-align: top;}
+        
+	<style>
+	dirr {text-align:center;}
+	
+	@media screen and (max-width:1080px) {
+	dirr {width: 90%;display: inline-block;vertical-align: top;}
 	}
 
-    </style>
+       </style>
 
 </head>
-
-
+	
 <body>
   <dirr>
     <model-viewer
@@ -48,9 +39,6 @@ dirr{width: 90%;
   
      </model-viewer>
   </dirr>
-<script>
-    console.log(window.innerWidth);
-  </script>
 </body>
 
 </html>
