@@ -19,22 +19,22 @@
 
 <body>
   <dirr>
-    <model-viewer
-      reveal="manual"
-      src="./2021_AR_Github/index_Cube_Test.gltf"
-      ios-src="./2021_AR_Github/index_Cube_Test.usdz" 
+	<model-viewer
+	reveal="manual"
+	poster="./2021_AR_Github/data/Background.png"
+	style="width:360px;height:555px;" 
+	src="./2021_AR_Github/index_Cube_Test.gltf"
+	ios-src="./2021_AR_Github/index_Cube_Test.usdz" 
       
-      poster="./2021_AR_Github/data/Background.png" 
-      style="width:360px;height:555px;" 
-     
-      ar
-      ar-modes="scene-viewer quick-look"
-      ar-scale="auto"
-      exposure= "1" 
-      auto-rotate
-      shadow-intensity= "1"
-       camera-controls
-	 >
+	ar-modes="scene-viewer quick-look"
+           	
+	shadow-intensity= "1"
+	camera-controls
+	interaction-prompt="auto"
+	auto-rotate
+	ar
+	ar-scale="auto"
+	exposure= "1">
 	
 	<button 
 	  id="custom-ar-button"
