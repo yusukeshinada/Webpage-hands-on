@@ -8,7 +8,7 @@
   <!-- Import the component -->
 	<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 	<script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
-
+	<script  src=https://unpkg.com/resize-observer-polyfill@0.5.1/dist/ResizeObserver.js"></script>
     <style>
 	dirr {text-align:center; }
 	   
@@ -32,9 +32,9 @@
       ar-scale="auto"
       exposure= "1" 
       auto-rotate
-      camera-controls
-		  dismissPoster()
-      shadow-intensity= "1" >
+      shadow-intensity= "1"
+       camera-controls
+	 >
 	
 	<button 
 	  id="custom-ar-button"
