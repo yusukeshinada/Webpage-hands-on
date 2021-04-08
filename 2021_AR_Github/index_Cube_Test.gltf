@@ -8,6 +8,9 @@
         {
             "name" : "Scene",
             "nodes" : [
+                0,
+                2,
+                3,
                 4
             ]
         }
@@ -28,6 +31,12 @@
             ]
         },
         {
+            "name" : "Empty"
+        },
+        {
+            "children" : [
+                1
+            ],
             "mesh" : 1,
             "name" : "Balloon.001",
             "scale" : [
@@ -68,15 +77,6 @@
                 -0.04360131546854973,
                 -0.05948732793331146
             ]
-        },
-        {
-            "children" : [
-                0,
-                1,
-                2,
-                3
-            ],
-            "name" : "Empty"
         }
     ],
     "animations" : [
@@ -128,21 +128,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 1,
+                        "node" : 2,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 1,
+                        "node" : 2,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 1,
+                        "node" : 2,
                         "path" : "scale"
                     }
                 }
@@ -171,21 +171,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 2,
+                        "node" : 3,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 2,
+                        "node" : 3,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 2,
+                        "node" : 3,
                         "path" : "scale"
                     }
                 }
@@ -214,21 +214,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 3,
+                        "node" : 4,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 3,
+                        "node" : 4,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 3,
+                        "node" : 4,
                         "path" : "scale"
                     }
                 }
