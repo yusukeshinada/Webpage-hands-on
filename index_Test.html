@@ -12,10 +12,11 @@
 	  	<script src="https://unpkg.com/resize-observer-polyfill@1.5.0/dist/ResizeObserver.js"></script>
 	  	<script src="https://unpkg.com/fullscreen-polyfill@1.0.2/dist/fullscreen.polyfill.js"></script>
 	  	<script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
-	
+		
 	</head>
 
 	<body>
+		<script type="text/javascript"> showPoster() </script>
 		<model-viewer
 		reveal="auto"
 		poster="./2021_AR_Github/data/Background.png"
@@ -32,7 +33,7 @@
 		ar
 		ar-scale="auto"
 		exposure= "1">
-		<script type="text/javascript"> showPoster() </script>
+		
 		<button 
 		  id="custom-ar-button"
 		  slot="ar-button"
