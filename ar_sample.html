@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>This is Sample</title>
+
+	  <!-- Import the component -->
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+	
+<!--
+<script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script>
+	<script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+	<script src="https://unpkg.com/resize-observer-polyfill@1.5.0/dist/ResizeObserver.js"></script>
+	<script src="https://unpkg.com/fullscreen-polyfill@1.0.2/dist/fullscreen.polyfill.js"></script>
+	<script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+-->
+	
+</head>
+
+<body>
+    <model-viewer
+    reveal="manual"
+    ios-src="./ar_sample/toy_car.usdz" 
+    src="./ar_sample/sample.gltf"
+    alt="A 3D model"
+   	ar
+	ar-modes="webxr scene-viewer quick-look"
+	quick-look-browsers = "safari chrome"
+
+    
+	   	      	
+	ar-scale="auto"
+    camera-controls
+	exposure= "1"
+	disable-zoom
+	shadow-intensity= "1"
+	auto-rotate
+
+	poster="./ar_sample/background.png" 
+    style="text-align:center;width:360px;height:555px;"
+
+	>
+	
+	<button 
+		id="custom-ar-button"
+		slot="ar-button"
+		style="margin-top:380px; width:100px; height:100px; border-style:none; background:url(./ar_sample/start.png) left top no-repeat ; background-size:cover;">
+	</button>
+
+     </model-viewer>  
+
+
+
+
+</html>
+
+
+<!-- 
+
+
+    test90.usdz
+-->
+
+
+
+
